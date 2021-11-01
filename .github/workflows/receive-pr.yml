@@ -25,6 +25,6 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew clean build
       - name: Docker build with Dockerfile
-        run: docker build -t woojang1230/github-action-test:latest .
+        run: docker build -t woojang1230/ci-cd-test:latest .
       - name: Docker push
-        run: docker push woojang1230/github-action-test:latest
+        run: docker push woojang1230/ci-cd-test:latest

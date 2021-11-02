@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class DeploymentRestController {
     @GetMapping
     public ResponseEntity<String> connectServer(){
-        System.out.println("HIHIHI!!!");
-        return ResponseEntity.ok("CONNECT!! - Modify! End Auto Push & Pull & Run");
+        return ResponseEntity.ok("CONNECT!! - Modify! End Auto Push & Pull & Run & Request Change!");
     }
 }

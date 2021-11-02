@@ -2,6 +2,7 @@ name: Receive PR
 
 on:
   pull_request_target:
+    branches: [ main ]
 
 jobs:
   build:

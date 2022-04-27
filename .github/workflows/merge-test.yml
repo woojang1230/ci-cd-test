@@ -19,6 +19,7 @@ jobs:
         uses: devmasx/merge-branch@master
         with:
           type: now
+          message: '[동기화] Main to Merge-Test'
           from_branch: main
           target_branch: merge-test
           github_token: ${{ github.token }}

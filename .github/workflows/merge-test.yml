@@ -1,0 +1,24 @@
+name: Merge from main to release, stage
+
+on:
+  pull_request_target:
+    branches: [ main ]
+    types: [ labeled ]
+  workflow_dispatch:
+
+env:
+  IMAGE_TAG: ${{ format('{0}/kumsung-front-admin:prod.{1}', secrets.DOCKERHUB_USERNAME, github.event.number ) }}
+
+jobs:
+  image_build_and_push:
+    if: ${{ ! contains( github.event.head_commit.message, 'skip ci' ) && ! contains( github.event.head_commit.message, 'ci skip' ) && github.event.label.name == 'merge:synchronization' && github.event.pull_request.merged }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Merge main -> merge-test
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: main
+          target_branch: merge-test
+          github_token: ${{ github.token }}

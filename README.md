@@ -1,5 +1,6 @@
 # ci-cd-test 프로젝트
 - [이동](#1-개요)
+- [이동](#12-개요)
 ### `Github Action`을 사용한 CI/CD 시연 프로젝트
 - `Github Flow` 적용
 - `Dockerfile`을 사용한 이미지 빌드 & 배포
@@ -18,4 +19,6 @@
 - test3
 
 ### 1. 개요
+- HI
+#### 1.2 개요
 - HI
